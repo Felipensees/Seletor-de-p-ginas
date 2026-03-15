@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletor de Páginas</title>
+    <style>
+        body {
+            background-color: #7cc0ff;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            gap: 40px; 
+        }
+
+        .title {
+            color: white;
+            font-style: italic;
+            font-size: 20px;
+            margin-bottom: 20px;
+            display: block;
+            text-align: center;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .btn {
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            border: 1.5px solid white;
+            border-radius: 18px;
+            padding: 6px 28px;
+            font-size: 22px;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+
+        /* Efeito de Hover só para os botões do primeiro grupo */
+        .hover-group .btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        .nav-btn {
+            font-size: 18px;
+            letter-spacing: -2px;
+        }
+
+        /* Para o segundo grupo, sem hover */
+        .no-hover-group .btn {
+            cursor: default; /* mostra que não é clicável */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Grupo com efeito hover -->
+    <div class="pagination-card hover-group">
+        <span class="title">Quando passar o mouse</span>
+        <div class="btn-group">
+            <a href="#" class="btn nav-btn">&lt;&lt;</a>
+            <a href="#" class="btn">1</a>
+            <a href="#" class="btn">2</a>
+            <a href="#" class="btn">3</a>
+            <a href="#" class="btn nav-btn">&gt;&gt;</a>
+        </div>
+    </div>
+
+    <!-- Grupo sem efeito hover -->
+    <div class="pagination-card no-hover-group">
+        <span class="title">Normal, sem hover</span>
+        <div class="btn-group">
+            <a href="#" class="btn nav-btn">&lt;&lt;</a>
+            <a href="#" class="btn">1</a>
+            <a href="#" class="btn">2</a>
+            <a href="#" class="btn">3</a>
+            <a href="#" class="btn nav-btn">&gt;&gt;</a>
+        </div>
+    </div>
+
+</body>
+</html>
